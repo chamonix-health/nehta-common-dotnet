@@ -1,8 +1,6 @@
 del *.nupkg
 
-msbuild /p:Configuration=Release
-
-NuGet.exe pack Common\Common.csproj  -Properties Configuration=Release
+dotnet pack .\Common\Common.csproj -c Release -o .
 
 pause
 
